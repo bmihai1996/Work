@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    </head>
+    <body>
+        <style>
+            body{background-color:lightblue;}
+        </style>
+      
+        
+        <div class="container">
+            <h1>This is the list of all students:</h1>
+            <br><br><br>
+            {%for item in all_students%}
+            <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">{{item.first_name}} {{item.last_name}}</div>
+                <div class="card-body">
+                  <h5 class="card-title">Student Details:</h5>
+                  <p class="card-text">Student's age: {{item.age}}</p>
+                  <p class="card-text">Is olympic or not: {{item.is_olympic}}</p>
+                  <p class="card-text">Student email: {{item.email}}</p>
+                  <p class="card-text">Description: {{item.description}}</p>
+                  <p class="card-text">Student gender: {{item.gender}}</p>
+                  <h3 class="card-text">Student's School: <br>{{item.school.school_name}}</h3>
+                  <h3 class="card-text">School address : <br>{{item.school.school_address}}</h3>
+                </div>
+              </div>
+            {%endfor%}
+        </div>
+    </body>
+</html>

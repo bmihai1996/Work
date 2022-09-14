@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{%load static%}
+{% load crispy_forms_tags %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Create a new student</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <style>
+            body{background-color:lightblue;}
+        </style>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6 offset-md-3"><br>
+                    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+                        <form method="post">
+                            {# csrf token ofera protectie impotriva falsificariicererilor intre site/uri. #}
+                            {% csrf_token %}
+                            <div class="card-title">
+                                <h4 class="text-center">Add details about new student</h4>
+                            </div>
+                            <div class="card-body">
+                                {{ form.as_p }}
+                            </div>
+                            <div class="card-footer text-center">
+                                <button type="submit" class="btn btn-success">Save a new student</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <style>
+            body{background-color:lightblue;}
+        </style>
+        <div class="container">
+        <h1>This is a simple app made in Django using REST_FRAMEWORK</h1>
+        <h2>The purpose of this app is to test the data sent by the models through the API</h2>
+        <h2>For the data, we use only 2 models: School and students</h3>
+        <h3>There is a one to many relationship between models</h3>
+        <h3>the purpose is to test the sended data in Postman and check app's endpoints with Postman</h3>
+        <br><br><Br>
+
+            <div class="container 2">
+                <h2>URLS:</h2>
+                <a href="{% url 'create_school' %}"><button type="button" class="btn btn-secondary">Create a school </button></a>
+                <a href="{% url 'list_of_schools' %}"><button type="button" class="btn btn-secondary">See list of created schools </button></a>
+                <a href="{% url 'create_student' %}"><button type="button" class="btn btn-secondary">Create a student </button></a>
+                <a href="{% url 'list_of_students' %}"><button type="button" class="btn btn-secondary">See list of students</button></a>
+            </div>
+        </div>
+    </body>
+</html>
