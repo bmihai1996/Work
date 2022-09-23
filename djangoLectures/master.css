@@ -1,0 +1,10 @@
+
+.btn-danger {
+    color:gree;
+    background-color:purple;
+}
+
+.btn-danger:hover{
+    background-color: blue;
+    color:red;
+}
